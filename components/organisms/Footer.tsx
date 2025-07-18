@@ -16,7 +16,10 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative bg-white text-black dark:bg-neutral-900 dark:text-white px-6 py-16 mt-20">
+    <footer
+      id="contact"
+      className="relative bg-white text-black dark:bg-neutral-900 dark:text-white px-6 py-16 mt-20"
+    >
       {/* Back to top button */}
       <button
         onClick={scrollToTop}

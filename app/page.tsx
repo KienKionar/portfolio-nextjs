@@ -3,7 +3,7 @@
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Github, Instagram, Linkedin, Twitter } from "lucide-react";
+import { Github, Instagram, Linkedin } from "lucide-react";
 
 export default function Hero() {
   const [text] = useTypewriter({
@@ -15,10 +15,7 @@ export default function Hero() {
   });
 
   return (
-    <section
-      id="home"
-      className="min-h-[90vh] flex flex-col md:flex-row items-center justify-center gap-10 px-4 pt-16 md:py-12 text-white"
-    >
+    <section className="min-h-[90vh] flex flex-col md:flex-row items-center justify-center gap-10 px-4 pt-16 md:py-12 text-white">
       {/* Foto */}
       <div className="relative w-48 h-48 md:w-60 md:h-60 rounded-full overflow-hidden border-4 dark:border-gray-500 dark:shadow-neutral-600/80 border-black shadow-lg">
         <Image
@@ -27,6 +24,8 @@ export default function Hero() {
           fill
           draggable="false"
           className="object-cover bg-gray-800"
+          placeholder="blur"
+          blurDataURL="/rizal-blur.png"
         />
       </div>
 
