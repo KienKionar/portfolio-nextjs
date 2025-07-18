@@ -44,14 +44,6 @@ export default function Navbar() {
         <li>
           <Link
             className="text-black/80 dark:text-white/80 hover:dark:text-white transition-all duration-300 "
-            href="/"
-          >
-            Home
-          </Link>
-        </li>
-        <li>
-          <Link
-            className="text-black/80 dark:text-white/80 hover:dark:text-white transition-all duration-300 "
             href="/about"
           >
             About
@@ -60,9 +52,9 @@ export default function Navbar() {
         <li>
           <Link
             className="text-black/80 dark:text-white/80 hover:dark:text-white transition-all duration-300 "
-            href="#projects"
+            href="/projects"
           >
-            Project
+            Projects
           </Link>
         </li>
         <li>

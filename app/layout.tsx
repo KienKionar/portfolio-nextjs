@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${fontSans.variable} ${fontMono.variable} antialiased transition-all duration-300 `}
+        className={`${fontSans.variable} ${fontMono.variable} antialiased transition-all duration-150 `}
       >
         <Navbar />
 

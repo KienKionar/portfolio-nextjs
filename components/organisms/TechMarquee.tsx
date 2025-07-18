@@ -37,7 +37,7 @@ export default function TechMarquee() {
 
   // Frame-by-frame update scroll
   useAnimationFrame((t, delta) => {
-    const velocity = isHover ? 1 : 1.3;
+    const velocity = isHover ? 0.8 : 1.5;
     const moveBy = velocity * (delta / 16.67);
     const currentX = baseX.get();
 
@@ -53,12 +53,19 @@ export default function TechMarquee() {
 
   return (
     <div
-      className="overflow-hidden w-full py-6 mt-10 select-none"
+      className="relative overflow-hidden w-full py-6 mt-10 select-none group"
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
     >
+      {/* GRADIENT KIRI */}
+      <div className="pointer-events-none absolute transition-opacity top-0 left-0 h-full w-32 bg-gradient-to-r from-white via-white/60 to-transparent dark:from-[#171717] dark:via-[#171717]/50  z-10" />
+
+      {/* GRADIENT KANAN */}
+      <div className="pointer-events-none absolute transition-opacity top-0 right-0 h-full w-32 bg-gradient-to-l from-white via-white/60 to-transparent dark:from-[#171717] dark:via-[#171717]/50  z-10" />
+
+      {/* MARQUEE */}
       <motion.div
-        className="flex gap-10 w-max"
+        className="flex gap-[38] w-max"
         style={{ x }}
         ref={containerRef}
       >
@@ -69,7 +76,7 @@ export default function TechMarquee() {
             alt="tech-icon"
             width={100}
             height={100}
-            draggable="false"
+            draggable={false}
             className="opacity-80 grayscale hover:grayscale-0 hover:opacity-100 cursor-pointer transition-all duration-150"
           />
         ))}
