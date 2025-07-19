@@ -77,7 +77,7 @@ export default function TechMarquee() {
             width={100}
             height={100}
             draggable={false}
-            className="opacity-80 grayscale hover:grayscale-0 hover:opacity-100 cursor-pointer transition-all duration-150"
+            className="opacity-80 grayscale hover:grayscale-0 hover:opacity-100 cursor-pointer transition-all duration-150 w-15 md:w-24"
           />
         ))}
       </motion.div>

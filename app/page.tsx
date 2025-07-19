@@ -4,6 +4,7 @@ import { useTypewriter, Cursor } from "react-simple-typewriter";
 import Image from "next/image";
 import Link from "next/link";
 import { Github, Instagram, Linkedin } from "lucide-react";
+import Lanyard from "@/components/Components/Lanyard/Lanyard";
 
 export default function Hero() {
   const [text] = useTypewriter({
@@ -15,15 +16,18 @@ export default function Hero() {
   });
 
   return (
-    <section className="min-h-[90vh] flex flex-col md:flex-row items-center justify-center gap-10 px-4 pt-16 md:py-12 text-white">
+    <section className=" z-50 min-h-[90vh] flex flex-col md:flex-row-reverse items-center justify-center gap-10 px-4 pt-16 md:py-12 text-white">
       {/* Foto */}
-      <div className="relative w-48 h-48 md:w-60 md:h-60 rounded-full overflow-hidden border-4 dark:border-gray-500 dark:shadow-neutral-600/80 border-black shadow-lg">
+      <div className="relative w-48 h-48 md:w-1/2 md:h-full overflow-hidden ">
+        <div className="hidden md:block">
+          <Lanyard fov={15} position={[0, 0, 20]} gravity={[0, -40, 0]} />
+        </div>
         <Image
           src="/rizal.png"
           alt="Foto Rizal"
           fill
           draggable="false"
-          className="object-cover bg-gray-800"
+          className="object-cover bg-gray-800 block md:hidden"
           placeholder="blur"
           blurDataURL="/rizal-blur.png"
         />

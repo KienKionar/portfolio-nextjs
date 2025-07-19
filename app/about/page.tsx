@@ -1,4 +1,5 @@
 import TechMarquee from "@/components/organisms/TechMarquee";
+import ScrollVelocity from "@/components/TextAnimations/ScrollVelocity/ScrollVelocity";
 
 export default function About() {
   return (
@@ -38,6 +39,15 @@ export default function About() {
         kolaborasi atau freelance project. Yuk connect kalau kamu punya ide
         keren atau ingin kerja bareng! 🚀
       </p>
+
+      {/* Teks Velocity */}
+      <div className="py-16">
+        <ScrollVelocity
+          texts={["Muhamad Afrizal", "Muhamad Afrizal"]}
+          velocity={50}
+          className=" font-mono text-3xl md:text-8xl font-bold text-black/10 dark:text-white/10 "
+        />
+      </div>
 
       {/* What I Can */}
       <div className="mt-16">
