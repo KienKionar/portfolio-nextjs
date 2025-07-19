@@ -20,7 +20,7 @@ export default function Hero() {
       {/* Foto */}
       <div className="relative w-48 h-48 md:w-1/2 md:h-full overflow-hidden ">
         <div className="hidden md:block">
-          <Lanyard fov={15} position={[0, 0, 20]} gravity={[0, -40, 0]} />
+          <Lanyard fov={10} position={[0, 0, 20]} gravity={[0, -50, 0]} />
         </div>
         <Image
           src="/rizal.png"
